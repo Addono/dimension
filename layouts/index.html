@@ -15,7 +15,9 @@
             </div>
             <div class="content">
               <div class="inner">
-                <h1>{{ .Site.Title | safeHTML }}</h1>
+			    {{range .Site.Params.main }}
+			    <h1>{{ .title | safeHTML}}</h1>
+				{{ end }}
                 <p>{{ .Site.Params.description | safeHTML }}</p>
               </div>
             </div>
