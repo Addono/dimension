@@ -15,8 +15,8 @@
             </div>
             <div class="content">
               <div class="inner">
-			    {{ range .Site.Params.main }}
-                    <{{ .tag }}>{{ .title }}"</"{{ .tag}}>
+			    {{range .Site.Params.main }}
+			    <h1>{{ .title | safeHTML}}</h1>
 				{{ end }}
                 <p>{{ .Site.Params.description | safeHTML }}</p>
               </div>
